@@ -11,20 +11,23 @@
 <body>
     <div id="wraperContent">
         <figure>
-            <img src="img/me.jpg" alt="David Bernal González imágen" width="500" height="600" id="me">
+            <img src="img/me.jpg" alt="David Bernal González imágen" id="me"><span id='test'></span>
             <figcaption>David Bernal González</figcaption>
         </figure>
-        <header><a href="#">Full Stack Developer</a></header>
+
+        <header><a href="#" id="title">Full Stack Developer</a></header>
 
         <div id="top-nav">
                 <nav>
+                    <!--BORDE LEFT MENU-->
                     <div class="page-divider center"><span></span></div>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="formacion.html">Formación</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="index.html" class="menuItem">Inicio</a></li>
+                        <li><a href="portfolio.html" class="menuItem">Portfolio</a></li>
+                        <li><a href="formacion.html" class="menuItem">Formación</a></li>
+                        <li><a href="contacto.html" class="menuItem">Contacto</a></li>
                     </ul>
+                    <!--BORDE RIGHT MENU-->
                     <div class="page-divider center"><span></span></div>
                 </nav>
         </div>
@@ -33,5 +36,42 @@
             <h1>PortFolio:</h1>
         </div>
     </div>
+
+    <script type="text/javascript">
+        document.getElementById('me').addEventListener('mouseover', function() {
+            document.getElementById('me').src = "img/me2.png";
+            document.getElementById('title').style.backgroundColor = "tomato";
+        });
+
+        document.getElementById('me').addEventListener('mouseout', function() {
+            document.getElementById('me').src = "img/me.jpg";
+            document.getElementById('title').style.backgroundColor = "white";
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            let path = window.location.pathname;
+            let page = path.split("/").pop();
+            let res = page.slice(0, page.length-5);
+
+            switch(res) {
+                case "index":
+                    document.getElementsByClassName('menuItem')[0].style.color = "black";
+                    document.getElementsByClassName('menuItem')[0].style.borderBottom = "solid 2px";
+                    break;
+                case "portfolio":
+                    document.getElementsByClassName('menuItem')[1].style.color = "black";
+                    document.getElementsByClassName('menuItem')[1].style.borderBottom = "solid 2px";
+                    break;
+                case "formacion":
+                    document.getElementsByClassName('menuItem')[2].style.color = "black";
+                    document.getElementsByClassName('menuItem')[2].style.borderBottom = "solid 2px";
+                    break;
+                case "contacto":
+                    document.getElementsByClassName('menuItem')[3].style.color = "black";
+                    document.getElementsByClassName('menuItem')[3].style.borderBottom = "solid 2px";
+                    break;
+            }
+        });
+    </script>
 </body>
 </html>

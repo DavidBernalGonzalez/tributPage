@@ -22,10 +22,10 @@
                     <!--BORDE LEFT MENU-->
                     <div class="page-divider center"><span></span></div>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="formacion.html">Formación</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="index.html" class="menuItem">Inicio</a></li>
+                        <li><a href="portfolio.html" class="menuItem">Portfolio</a></li>
+                        <li><a href="formacion.html" class="menuItem">Formación</a></li>
+                        <li><a href="contacto.html" class="menuItem">Contacto</a></li>
                     </ul>
                     <!--BORDE RIGHT MENU-->
                     <div class="page-divider center"><span></span></div>
@@ -33,10 +33,10 @@
         </div>
 
         <div>
-            <p>Hola, bienvenido a mí tribut page, soy David y es un placer saludarte.
-                Soy un amante de la informática, mi pasión por el mundo IT, me ha llevado a trabajar en el mundo de las consultorias.
+            <p>Hola, soy David. Bienvenid@ a mi página, es un placer saludarte.
+                Soy un amante de la informática, mi pasión por el mundo IT, me ha llevado a trabajar en el mundo de las consultorías.
                 Tengo experiencia principalmente con Java y Spring Boot, aunque encontrarás más detalle de mis formaciones en el apartado formación.
-                Algunas de la tecnologías sobre las que he trabajado son: </p>
+                Algunas de lsa tecnologías sobre las que he trabajado son: </p>
             <h1>Front end:</h1>
             <ul class="liInline">
                 <li><img class="tecnology" src="img/icons/html.svg" alt="html"></li>
@@ -51,13 +51,41 @@
             <p></p>
         </div>
     </div>
+
     <script type="text/javascript">
         document.getElementById('me').addEventListener('mouseover', function() {
             document.getElementById('me').src = "img/me2.png";
+            document.getElementById('title').style.backgroundColor = "tomato";
         });
 
         document.getElementById('me').addEventListener('mouseout', function() {
             document.getElementById('me').src = "img/me.jpg";
+            document.getElementById('title').style.backgroundColor = "white";
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            let path = window.location.pathname;
+            let page = path.split("/").pop();
+            let res = page.slice(0, page.length-5);
+
+            switch(res) {
+                case "index":
+                    document.getElementsByClassName('menuItem')[0].style.color = "black";
+                    document.getElementsByClassName('menuItem')[0].style.borderBottom = "solid 2px";
+                    break;
+                case "portfolio":
+                    document.getElementsByClassName('menuItem')[1].style.color = "black";
+                    document.getElementsByClassName('menuItem')[1].style.borderBottom = "solid 2px";
+                    break;
+                case "formacion":
+                    document.getElementsByClassName('menuItem')[2].style.color = "black";
+                    document.getElementsByClassName('menuItem')[2].style.borderBottom = "solid 2px";
+                    break;
+                case "contacto":
+                    document.getElementsByClassName('menuItem')[3].style.color = "black";
+                    document.getElementsByClassName('menuItem')[3].style.borderBottom = "solid 2px";
+                    break;
+            }
         });
     </script>
 </body>

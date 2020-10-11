@@ -26,6 +26,7 @@ header a{
     text-transform: uppercase;
     letter-spacing: 3px;
     border: 3px solid #222;
+    padding-left: 2px;
 }
 
 #top-nav{
@@ -107,7 +108,7 @@ nav ul li a:last-child{
 
 #me:hover{
     transition: ease-in-out 2.5s;
-    filter: grayscale(60%);
+    filter: grayscale(75%);
 }
 
 #me figcaption{
@@ -153,7 +154,7 @@ p, section{
 }
 h1{
     margin: 10px 0px 10px 0px;
-
+    font-family: Georgia,serif;
 }
 
 

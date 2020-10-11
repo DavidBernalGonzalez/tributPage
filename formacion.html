@@ -11,27 +11,29 @@
 <body>
     <div id="wraperContent">
         <figure>
-            <img src="img/me.jpg" alt="David Bernal González imágen" width="500" height="600" id="me">
+            <img src="img/me.jpg" alt="David Bernal González imágen" id="me"><span id='test'></span>
             <figcaption>David Bernal González</figcaption>
         </figure>
-        <header><a href="#">Full Stack Developer</a></header>
+
+        <header><a href="#" id="title">Full Stack Developer</a></header>
 
         <div id="top-nav">
                 <nav>
+                    <!--BORDE LEFT MENU-->
                     <div class="page-divider center"><span></span></div>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="formacion.html">Formación</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="index.html" class="menuItem">Inicio</a></li>
+                        <li><a href="portfolio.html" class="menuItem">Portfolio</a></li>
+                        <li><a href="formacion.html" class="menuItem">Formación</a></li>
+                        <li><a href="contacto.html" class="menuItem">Contacto</a></li>
                     </ul>
+                    <!--BORDE RIGHT MENU-->
                     <div class="page-divider center"><span></span></div>
                 </nav>
         </div>
 
         <div>
             <section>
-				<h1 id="estudios">Estudios</h1>
 				<h2>Estudios oficiales</h2>
 				<ul>
 					<li>
@@ -55,8 +57,20 @@
 				</ul>
 				<h2>Otras títulaciones</h2>
 				<ul>
+					<li>
+						<span class="description">BootCamp Front End Pimec</span>
+						<a href="#" target="_blank" class="titulos">
+							<img src="./img/icons/pdf.svg" class="img_pdf" alt="descargar diploma">
+						</a>
+					</li>
+					<li>
+						<span class="description">BootCamp Full Stack Developer en KeepCoding</span>
+						<a href="#" target="_blank" class="titulos">
+							<img src="./img/icons/pdf.svg" class="img_pdf" alt="descargar diploma">
+						</a>
+					</li>
                     <li>
-						<span class="description">Competencias tecnológicas en C# y SQL</span>
+						<span class="description">BootCamp de C# y SQL</span>
 						<a href="https://drive.google.com/file/d/11b8sLzomvsJNU6sP22Fck_0hI2c4NK-o/view" target="_blank" class="titulos">
 							<img src="./img/icons/pdf.svg" class="img_pdf" alt="descargar diploma">
 						</a>
@@ -141,13 +155,50 @@
 					</li>
 					<li>
 						<span class="description">Curso de Diseño web con HTML5 y CSS3 en Seis Cocos</span>
-						<a href="https://drive.google.com/open?id=1ttpsmxKSrN278A4S1rPilIFstAIjaYSs" target="_blank" class="titulos">
+						<a href="https://drive.google.com/file/d/14_njy7o1PNeAhltwg3DUyZt42kZKTMLh/view?usp=sharing" target="_blank" class="titulos">
 							<img src="./img/icons/pdf.svg" class="img_pdf">
 						</a>
 					</li>
 				</ul>
 			</section>
         </div>
-    </div>
+	</div>
+
+    <script type="text/javascript">
+        document.getElementById('me').addEventListener('mouseover', function() {
+            document.getElementById('me').src = "img/me2.png";
+            document.getElementById('title').style.backgroundColor = "tomato";
+        });
+
+        document.getElementById('me').addEventListener('mouseout', function() {
+            document.getElementById('me').src = "img/me.jpg";
+            document.getElementById('title').style.backgroundColor = "white";
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            let path = window.location.pathname;
+            let page = path.split("/").pop();
+            let res = page.slice(0, page.length-5);
+
+            switch(res) {
+                case "index":
+                    document.getElementsByClassName('menuItem')[0].style.color = "black";
+                    document.getElementsByClassName('menuItem')[0].style.borderBottom = "solid 2px";
+                    break;
+                case "portfolio":
+                    document.getElementsByClassName('menuItem')[1].style.color = "black";
+                    document.getElementsByClassName('menuItem')[1].style.borderBottom = "solid 2px";
+                    break;
+                case "formacion":
+                    document.getElementsByClassName('menuItem')[2].style.color = "black";
+                    document.getElementsByClassName('menuItem')[2].style.borderBottom = "solid 2px";
+                    break;
+                case "contacto":
+                    document.getElementsByClassName('menuItem')[3].style.color = "black";
+                    document.getElementsByClassName('menuItem')[3].style.borderBottom = "solid 2px";
+                    break;
+            }
+        });
+    </script>
 </body>
 </html>
