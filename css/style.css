@@ -79,6 +79,10 @@ nav ul li a{
     padding-bottom: -100px;
 }
 
+nav ul li a:hover{
+    color: tomato;
+}
+
 figcaption{
     color: #222;
     text-decoration: none;
@@ -108,7 +112,7 @@ nav ul li a:last-child{
 
 #me:hover{
     transition: ease-in-out 2.5s;
-    filter: grayscale(75%);
+    filter: grayscale(50%);
 }
 
 #me figcaption{
@@ -134,8 +138,8 @@ li {
 }
 
 .img_pdf{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 }
 
 p, section{
