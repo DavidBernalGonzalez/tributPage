@@ -1,3 +1,4 @@
+/*BASED IN: http://www.callieschweitzer.com/*/
 body{
     background-color: #fff;
 }
@@ -12,7 +13,6 @@ body{
     text-align: center;
 }
 
-/*http://www.callieschweitzer.com/*/
 /* CLASS CENTER CENTRA VERTICAL Y HORIZONTALMENTE */
 .center{
     overflow: auto;
@@ -90,6 +90,7 @@ figcaption{
     font-family: Varela Round,sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
+    padding-top: 5px;
 }
 
 nav ul li a:last-child{
@@ -105,7 +106,7 @@ nav ul li a:last-child{
     border-radius: 225px 225px 225px 225px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    padding-bottom: 50px;
+    padding-bottom: 60px;
     transition: padding 2s;
 }
 
@@ -230,5 +231,96 @@ fieldset{
 }
 
 
+/*CSS media query within a style sheet*/
+@media (max-width: 700px) {
+    body{
+        width: 300px;
+        margin: 0 auto;
+        padding: 2.5%;
+    }
 
+    #page-divider{
+        display: none;
+        border: none;
+        background-color: tomato;
+    }
 
+    #top-nav .page-divider:first-child{display: none; }
+    #top-nav .page-divider:last-child{ display: none; }
+
+    nav ul li{
+        display: block;
+    }
+
+    section{
+        margin-left: -15px;
+    }
+
+    form{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    input[type=text], input[type=number]{
+        width: 100px;
+    }
+    nav ul li{
+        margin-right: 0px;
+    }
+
+    nav ul li a{
+        display: block;
+        margin-right: 0px;
+    }
+
+    #me{
+        width: 150px;
+        height: 150px;
+    }
+    fieldset label{
+        display: block;
+    }
+
+    .iconArrowEffect, .icon{
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+
+    .iconArrowEffect:hover{}
+
+    #correoSpan{
+        font-size: 20px;
+    }
+
+    .liInline{
+        margin: 0 auto;
+        padding: 5px;
+    }
+
+    .wraperContent{
+        margin: 10px auto;
+    }
+
+    header a{
+        border: 0px;
+        padding: 2px;
+    }
+
+    #correo {
+        margin-right: -15px;
+    }
+
+    section{
+        margin-left: 5px;
+    }
+
+    section ul {
+        margin-left: -40px;
+    }
+
+    .margin .iconArrowEffect:last-child{
+        margin-right: -15px;
+    }
+
+}
