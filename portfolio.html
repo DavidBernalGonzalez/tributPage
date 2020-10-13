@@ -11,7 +11,7 @@
 <body>
     <div id="wraperContent">
         <figure>
-            <img src="img/me.jpg" alt="David Bernal González imágen" id="me"><span id='test'></span>
+            <img src="img/me.jpg" alt="David Bernal González imágen" id="me">
             <figcaption>David Bernal González</figcaption>
         </figure>
 
@@ -33,45 +33,12 @@
         </div>
 
         <div>
-            <h1>PortFolio:</h1>
+            <a href="https://github.com/DavidBernalGonzalez"><img src="img/icons/github.svg" alt="GitHub" class="iconArrowEffect" id="github"></a>
+            <a href="http://javadesde0.com/" class="margin"><img src="img/icons/website.svg" alt="Website" class="iconArrowEffect" id="website"></a>
         </div>
     </div>
 
-    <script type="text/javascript">
-        document.getElementById('me').addEventListener('mouseover', function() {
-            document.getElementById('me').src = "img/me2.png";
-            document.getElementById('title').style.backgroundColor = "tomato";
-        });
-
-        document.getElementById('me').addEventListener('mouseout', function() {
-            document.getElementById('me').src = "img/me.jpg";
-            document.getElementById('title').style.backgroundColor = "white";
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            let path = window.location.pathname;
-            let page = path.split("/").pop();
-            let res = page.slice(0, page.length-5);
-
-            switch(res) {
-                case "index":
-                    document.getElementsByClassName('menuItem')[0].style.color = "black";
-                    document.getElementsByClassName('menuItem')[0].style.borderBottom = "solid 2px";
-                    break;
-                case "portfolio":
-                    document.getElementsByClassName('menuItem')[1].style.color = "black";
-                    document.getElementsByClassName('menuItem')[1].style.borderBottom = "solid 2px";
-                    break;
-                case "formacion":
-                    document.getElementsByClassName('menuItem')[2].style.color = "black";
-                    document.getElementsByClassName('menuItem')[2].style.borderBottom = "solid 2px";
-                    break;
-                case "contacto":
-                    document.getElementsByClassName('menuItem')[3].style.color = "black";
-                    document.getElementsByClassName('menuItem')[3].style.borderBottom = "solid 2px";
-                    break;
-            }
-        });
-    </script>
+    <script src="js/static.js"></script>
+    <script src="js/porfolio.js"></script>
 </body>
 </html>

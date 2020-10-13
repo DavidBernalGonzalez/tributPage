@@ -127,7 +127,7 @@ li {
     display: inline-block;
 }
 
-.tecnology{
+.icon{
     width: 75px;
     height: 75px;
 }
@@ -142,6 +142,10 @@ li {
     height: 30px;
 }
 
+.img_pdf:hover{
+    content:url("/img/icons/pdfColor.svg");
+}
+
 p, section{
     padding: 0 7.5% 0 7.5%;
     font-size: 19px;
@@ -153,12 +157,76 @@ p, section{
     padding: 0;
 }
 
-.test{
-    color: tomato;
-}
 h1{
     margin: 10px 0px 10px 0px;
     font-family: Georgia,serif;
+}
+
+.wrapper{
+    max-width:400px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid #000;
+    display: none;
+}
+
+.wrapperVisible{
+    max-width:400px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid #000;
+    display: block;
+}
+
+label .left{
+    float: left;
+}
+
+input[type=text], input[type=number]{
+    float: right;
+    width: 300px;
+}
+.clear{
+    clear: both;
+}
+
+.clear, fieldset, input[type=submit], label[for=ejemplo], select{
+    margin-bottom: 20px;
+}
+input[type=submit]{
+    float: right;
+    margin-bottom: 20px;
+    width: 150px;
+    border: 1px solid #000;
+}
+
+fieldset{
+    border: 1px solid #000;
+}
+
+.iconArrowEffect{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 70px;
+    height: 70px;
+    margin-right: 50px;
+}
+
+.iconArrowEffect:hover{
+    transform: scale(1.3);
+}
+
+
+#correoSpan{
+    display: block;
+    font-size: 30px;
+    font-family: Georgia,serif;
+    margin: 10px;
+    text-align: center;
+}
+
+.a{
+    padding-bottom: 5px;
 }
 
 

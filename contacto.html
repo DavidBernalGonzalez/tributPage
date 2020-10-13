@@ -11,7 +11,7 @@
 <body>
     <div id="wraperContent">
         <figure>
-            <img src="img/me.jpg" alt="David Bernal González imágen" id="me"><span id='test'></span>
+            <img src="img/me.jpg" alt="David Bernal González imágen" id="me">
             <figcaption>David Bernal González</figcaption>
         </figure>
 
@@ -33,45 +33,27 @@
         </div>
 
         <div>
-           <h1>contact</h1>
+            <a href="https://www.linkedin.com/in/david-bernal-gonzalez/" target="_blank"><img src="img/icons/linkedin.svg" alt="LinkedIn" class="iconArrowEffect" id="linkedIn"></a>
+            <img src="img/icons/form.svg" alt="Form" class="iconArrowEffect" id="form">
+            <img src="img/icons/correo.svg" alt="Correo" class="iconArrowEffect" id="correo">
+            <div class="wrapper">
+                <form action="./form-result.php" method="POST" target="_self">
+                                <div class="clear"><label for="name" class="left">Nombre:</label><input type="text" name="name"></div>
+                                <div class="clear"><label for="surname" class="left">Apellidos:</label><input type="text" name="surname"></div>
+                                <div class="clear"><label for="apellidos" class="phone">Teléfono:</label><input type="number" name="phone"></div>
+                                <fieldset><!--Indica que vamos a -->
+                                    <legend>¿Cómo me has conocido?</legend><!-- Nos permite añadir un título sobre el borde del formulario-->
+                                    <label for="LinkedIn">LinkedIn<input type="radio" id="LinkedIn" name="contact" value="LinkedIn"></label>
+                                    <label for="Web">Web Programación<input type="radio" id="Web" name="contact" value="Web"></label>
+                                    <label for="Otro">Otro<input type="radio" id="Otro" name="contact" value="Otro"></label>
+                                </fieldset>
+                                <div class="clear"><input type="submit" value="Submit"></div>
+                </form> 
         </div>
+            <span id="correoSpan"> </span>
     </div>
 
-    <script type="text/javascript">
-        document.getElementById('me').addEventListener('mouseover', function() {
-            document.getElementById('me').src = "img/me2.png";
-            document.getElementById('title').style.backgroundColor = "tomato";
-        });
-
-        document.getElementById('me').addEventListener('mouseout', function() {
-            document.getElementById('me').src = "img/me.jpg";
-            document.getElementById('title').style.backgroundColor = "white";
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            let path = window.location.pathname;
-            let page = path.split("/").pop();
-            let res = page.slice(0, page.length-5);
-
-            switch(res) {
-                case "index":
-                    document.getElementsByClassName('menuItem')[0].style.color = "black";
-                    document.getElementsByClassName('menuItem')[0].style.borderBottom = "solid 2px";
-                    break;
-                case "portfolio":
-                    document.getElementsByClassName('menuItem')[1].style.color = "black";
-                    document.getElementsByClassName('menuItem')[1].style.borderBottom = "solid 2px";
-                    break;
-                case "formacion":
-                    document.getElementsByClassName('menuItem')[2].style.color = "black";
-                    document.getElementsByClassName('menuItem')[2].style.borderBottom = "solid 2px";
-                    break;
-                case "contacto":
-                    document.getElementsByClassName('menuItem')[3].style.color = "black";
-                    document.getElementsByClassName('menuItem')[3].style.borderBottom = "solid 2px";
-                    break;
-            }
-        });
-    </script>
+    <script src="js/static.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
